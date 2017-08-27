@@ -25,8 +25,7 @@ public class WeatherStation implements Observable<WeatherData> {
     }
 
     @Override
-    public void deregisterObserver(Observer<WeatherData> observer) {
-
+    public void deRegisterObserver(Observer<WeatherData> observer) {
     }
 
     @Override
@@ -34,7 +33,7 @@ public class WeatherStation implements Observable<WeatherData> {
         observers.forEach(observer -> observer.notifyChange(this.weatherData));
     }
 
-    public void setCurrentConditions(float temperature, float humidity, float pressure ){
+    void setCurrentConditions(float temperature, float humidity, float pressure ){
         this.weatherData = new WeatherData(temperature, humidity, pressure);
         notifyObservers();
     }

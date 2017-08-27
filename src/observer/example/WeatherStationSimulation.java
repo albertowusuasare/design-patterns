@@ -11,6 +11,6 @@ public class WeatherStationSimulation {
         weatherStation.setCurrentConditions(84, 22,102);
         weatherStation.setCurrentConditions(84, 22,102);
         statisticsDisplay.display();
-
+        weatherStation.deRegisterObserver(statisticsDisplay);
     }
 }
